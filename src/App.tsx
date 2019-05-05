@@ -13,7 +13,8 @@ class App extends Component {
               headers={[
                 {
                   key: 'ID',
-                  lable: "ID"
+                  lable: "ID",
+                  className: "padding-30"
                 },
                 {
                   key: 'Name',
