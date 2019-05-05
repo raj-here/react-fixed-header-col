@@ -1,4 +1,5 @@
 export default interface ITableHeader {
-    lable: string;
+    key: string;
+    lable?: string;
     className?: string;
 }
