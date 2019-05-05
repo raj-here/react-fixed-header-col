@@ -10,6 +10,7 @@ interface Props {
   headers: Array<ITableHeader>;
   tableClass?: string;
   theadClass?: string;
+  tableHeight: number;
 }
 
 interface State {
@@ -17,15 +18,12 @@ interface State {
 }
 
 export default class FixedHeaderFirstColTable extends Component<Props, State> {
-  // constructor(props: Props) {
-  //   super(props);
-  // }
 
   render(): JSX.Element {
 
-    const { headers, data, tableClass, theadClass } = this.props;
+    const { headers, data, tableClass, theadClass, tableHeight } = this.props;
     return (
-      <div className="table-container">
+      <div className="table-container" style= {{height: tableHeight}}>
         <table className={`table ${tableClass}`}>
           <thead className={`${theadClass}`}>
             <tr>
